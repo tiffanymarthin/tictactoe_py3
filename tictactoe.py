@@ -40,7 +40,7 @@ def player_input():
         print('Player 1 is O and Player 2 is X')
         return ['O','X','O']   
 
-#Check the position the player chooses if it's available or not, putting constraint of 1-9 position
+#Check the availability of the chosen position, putting a constraint of 1-9
 
 def space_check(board, position):
     if position == 0 or position > 9 or board[position] == 'X' or board[position] == 'O':
@@ -73,10 +73,10 @@ def choose_first():
 
     if player == 1:
         print('Player 1 plays first')
-        return [0,'Turn - Player 1','Turn - Player 2']
+        return [0,'Current Turn - Player 1','Current Turn - Player 2']
     else:
         print('Player 2 plays first')
-        return [1,'Turn - Player 2','Turn - Player 1']
+        return [1,'Current Turn - Player 2','Current Turn - Player 1']
 
 #Check whether any of the player wins the game
 
